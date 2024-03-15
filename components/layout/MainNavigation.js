@@ -4,7 +4,7 @@ import classes from "./MainNavigation.module.css";
 function MainNavigation() {
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>MeetupHub</div>
+      <div className={classes.logo}>MEETUPSPOT</div>
       <nav>
         <ul>
           <li>
