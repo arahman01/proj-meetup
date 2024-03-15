@@ -8,7 +8,7 @@ function HomePage(props) {
   return (
     <React.Fragment>
       <Head>
-        <title>MeetupHub</title>
+        <title>MEETUPSPOT</title>
         <meta
           name="description"
           content="Browse a huge list of highly active meetups"
@@ -33,9 +33,7 @@ function HomePage(props) {
 // }
 
 export async function getStaticProps() {
-  const client = await MongoClient.connect(
-    process.env.MONGO_CONNECTION_STRING
-  );
+  const client = await MongoClient.connect(process.env.MONGO_CONNECTION_STRING);
   const db = client.db();
   const meetupsCollection = db.collection("meetups");
   const meetups = await meetupsCollection.find().toArray();
